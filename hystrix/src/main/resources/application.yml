@@ -1,0 +1,15 @@
+eureka:
+  client:
+    service-url:
+      #eureka\u670D\u52A1\u7684\u8BBF\u95EE\u5730\u5740
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8086
+#ribbon:
+#  eureka:
+#    enabled: flase #\u7981\u7528ribbon
+spring:
+  application:
+    name: hystrix

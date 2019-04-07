@@ -1,0 +1,17 @@
+server:
+  port: 8089
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/topyuluo/config-repo
+      label: master
+  application:
+    name: config-server
+eureka:
+  client:
+    service-url:
+      #eureka\u670D\u52A1\u7684\u8BBF\u95EE\u5730\u5740
+      defaultZone: http://user:password123@localhost:8761/eureka

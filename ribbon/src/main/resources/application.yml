@@ -1,0 +1,16 @@
+eureka:
+  client:
+    service-url:
+      #eureka服务的访问地址
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8080
+ribbon:
+  eureka:
+    enabled: flase #禁用ribbon
+spring:
+  application:
+    name: ribbon
+

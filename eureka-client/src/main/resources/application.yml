@@ -1,0 +1,22 @@
+server:
+    port: 8763
+
+eureka:
+  client:
+    service-url:
+      #eureka服务的访问地址
+      defaultZone: http://user:password123@localhost:8761/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    #开启ip访问
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+spring:
+  application:
+    name: eureka-client
+
+info:
+  head: head
+  body: body
+
